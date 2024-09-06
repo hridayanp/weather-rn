@@ -12,6 +12,12 @@ const getBgVariantStyle = (variant: ButtonProps['bgVariant']) => {
       return 'bg-green-500';
     case 'outline':
       return 'bg-transparent border-neutral-300 border-[0.5px]';
+
+    case 'active-tab':
+      return 'bg-white';
+
+    case 'inactive-tab':
+      return 'bg-grey-100';
     default:
       return 'bg-[#0B1D29]';
   }
@@ -27,6 +33,9 @@ const getTextVariantStyle = (variant: ButtonProps['textVariant']) => {
       return 'text-red-100';
     case 'success':
       return 'text-green-100';
+
+    case 'inactive-tab':
+      return 'text-[#BDBDBD]';
     default:
       return 'text-white';
   }

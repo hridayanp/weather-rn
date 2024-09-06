@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { images } from '@/constants';
 import CustomButton from '@/components/CustomButton';
 import { View } from 'react-native';
+import { router } from 'expo-router';
 
 const Welcome = () => {
   return (
@@ -23,7 +24,7 @@ const Welcome = () => {
 
       <CustomButton title={'Register'} className="w-ful mb-4" />
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={() => router.push('/(auth)/login')}>
         <Text className="text-white underline text-[14px] font-semibold leading-[16.94px] text-center font-inter">
           Continue as Guest
         </Text>
