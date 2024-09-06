@@ -3,15 +3,15 @@ module.exports = {
   content: ['./app/**/*.{js,jsx,ts,tsx}', './components/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
-      // fontFamily: {
-      //   Jakarta: ['Jakarta', 'sans-serif'],
-      //   JakartaBold: ['Jakarta-Bold', 'sans-serif'],
-      //   JakartaExtraBold: ['Jakarta-ExtraBold', 'sans-serif'],
-      //   JakartaExtraLight: ['Jakarta-ExtraLight', 'sans-serif'],
-      //   JakartaLight: ['Jakarta-Light', 'sans-serif'],
-      //   JakartaMedium: ['Jakarta-Medium', 'sans-serif'],
-      //   JakartaSemiBold: ['Jakarta-SemiBold', 'sans-serif'],
-      // },
+      fontFamily: {
+        Inter: ['Inter', 'sans-serif'],
+        InterBold: ['Inter-Bold', 'sans-serif'],
+        InterExtraBold: ['Inter-ExtraBold', 'sans-serif'],
+        InterExtraLight: ['Inter-ExtraLight', 'sans-serif'],
+        InterLight: ['Inter-Light', 'sans-serif'],
+        InterMedium: ['Inter-Medium', 'sans-serif'],
+        InterSemiBold: ['Inter-SemiBold', 'sans-serif'],
+      },
       colors: {
         primary: {
           100: '#F5F8FF',

@@ -11,7 +11,13 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    'Inter-Bold': require('../assets/fonts/Inter-Bold.ttf'),
+    'Inter-ExtraBold': require('../assets/fonts/Inter-ExtraBold.ttf'),
+    'Inter-ExtraLight': require('../assets/fonts/Inter-ExtraLight.ttf'),
+    'Inter-Light': require('../assets/fonts/Inter-Light.ttf'),
+    'Inter-Medium': require('../assets/fonts/Inter-Medium.ttf'),
+    Inter: require('../assets/fonts/Inter-Regular.ttf'),
+    'Inter-SemiBold': require('../assets/fonts/Inter-SemiBold.ttf'),
   });
 
   useEffect(() => {
@@ -27,7 +33,8 @@ export default function RootLayout() {
   return (
     <Fragment>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style={'dark'} />
