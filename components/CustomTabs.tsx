@@ -1,5 +1,5 @@
 import React, { useState, ReactNode } from 'react';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import CustomButton from './CustomButton';
 
 interface TabsProps {
@@ -8,12 +8,29 @@ interface TabsProps {
 }
 
 const Tabs: React.FC<TabsProps> = ({ tabs, children }) => {
+  console.log('children', children);
   const [activeTab, setActiveTab] = useState<number>(0);
 
+  const getMessage = () => {
+    switch (activeTab) {
+      case 0:
+        return 'Welcome to Indra! Register your account!';
+      case 1:
+        return 'Welcome back! Glad to see you again!';
+      default:
+        return '';
+    }
+  };
+
   return (
-    <View className="w-full">
+    <View className="w-full h-full">
+      <View className="py-5">
+        <Text className="text-white text-[28px] font-medium leading-[33.89px] text-left font-InterMedium">
+          {getMessage()}
+        </Text>
+      </View>
       {/* Tab Section Background */}
-      <View className="bg-[#787878] p-2 rounded-[12px] mb-4 ">
+      <View className="bg-[#787878] p-2 rounded-[12px] mb-0">
         {/* Tab Buttons */}
         <View className="flex flex-row justify-around">
           {tabs.map((tab, index) => (
